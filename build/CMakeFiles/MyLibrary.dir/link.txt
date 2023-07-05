@@ -1,2 +1,0 @@
-E:/opencv/Dev-Cpp/TDM-GCC-64/bin/ar.exe qc libMyLibrary.a CMakeFiles/MyLibrary.dir/src/P43_StackScope.cc.obj CMakeFiles/MyLibrary.dir/src/P43_Test.cc.obj CMakeFiles/MyLibrary.dir/src/P44_Smartptr.cc.obj CMakeFiles/MyLibrary.dir/src/P45_operator_arror.cc.obj
-E:/opencv/Dev-Cpp/TDM-GCC-64/bin/ranlib.exe libMyLibrary.a
