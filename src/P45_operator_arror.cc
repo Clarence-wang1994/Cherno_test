@@ -18,10 +18,10 @@ class ScopedEntity{
         }
 };
 
-int main(){
-    {
-        ScopedEntity e = new Entity();
-    }
+// int main(){
+//     {
+//         ScopedEntity e = new Entity();
+//     }
     
-    std::cin.get();
-} 
+//     std::cin.get();
+// } 

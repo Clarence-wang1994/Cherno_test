@@ -8,6 +8,8 @@ cmake_minimum_required(VERSION 3.0)
 
 project(CPP_Cherno)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
+
 set(CMAKE_CXX_STANDARD 14)
 
 if(NOT CMAKE_BUILD_TYPE)
@@ -38,20 +40,22 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 message(STATUS "CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
 
 #查找Opencv库
-# set(OpenCV_DIR "E:\\opencv\\opencv-4.7.0\\opencv-4.7.0\\build")
+set(OpenCV_DIR "E:\\opencv\\opencv-4.7.0\\opencv-4.7.0\\build")
 
-# find_package(OpenCV REQUIRED)
+find_package(OpenCV REQUIRED)
 
 #生成可执行文件
 add_executable(${PROJECT_NAME} ${SRC_DIR_LIST})
 
 #添加OpenCV头文件路径
-# include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${OpenCV_INCLUDE_DIRS})
 #链接OpenCV库文件
-# link_directories(${OpenCV_LIBRARY_DIRS})打印//
+link_directories(${OpenCV_LIBRARY_DIRS})
+message(STATUS "OpenCV_INCLUDE_DIRS = ${OpenCV_INCLUDE_DIRS}")
+message(STATUS "OpenCV_LIBRARY_DIRS = ${OpenCV_LIBRARY_DIRS}")
 
 #OpenCV库文件添加到项目或者动态库中
-# target_link_libraries(MyLibrary ${OpenCV_LIBS})
+target_link_libraries(CPP_Cherno ${OpenCV_LIBS})
 
 #自动查找头文件路径函数(没有去重)
 macro(FIND_INCLUDE_DIR result curdir)  #定义函数,2个参数:存放结果result；指定路径curdir；
