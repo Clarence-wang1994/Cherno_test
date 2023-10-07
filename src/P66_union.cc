@@ -1,0 +1,39 @@
+#include <vector>
+#include <iostream>
+struct Vector2
+{
+    float x, y;
+};
+
+struct Vector4
+{
+    union
+    {
+        struct
+        {
+            float x, y, z, w;
+        };
+        struct
+        {
+           Vector2 a,b;
+        };  
+    };
+    
+};
+
+
+void PrintVector(const Vector2& vector){
+    std::cout << vector.x << ", " << vector.y << std::endl;
+}
+
+int main(int argc, char** argv){
+
+    Vector4 vector = {1.1f, 2.0f, 3.0f, 4.0f};
+    PrintVector(vector.a);
+    PrintVector(vector.b);
+    std::cout << "--------------" << std::endl;
+    vector.z = 500.0f;
+    PrintVector(vector.a);
+    PrintVector(vector.b);
+    std::cin.get();
+}
