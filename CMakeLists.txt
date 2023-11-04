@@ -58,7 +58,7 @@ add_executable(${PROJECT_NAME}_P63 src/P63_timer.cc)
 add_executable(${PROJECT_NAME}_P64 src/P64_sort.cc)
 add_executable(P65_${PROJECT_NAME} src/P65_pointer_type.cc)
 add_executable(P66_${PROJECT_NAME} src/P66_union.cc)
-
+add_executable(P67_${PROJECT_NAME} src/P67_virtual_dtor.cc)
 
 #添加OpenCV头文件路径
 include_directories(${OpenCV_INCLUDE_DIRS})

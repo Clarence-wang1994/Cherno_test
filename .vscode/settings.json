@@ -58,6 +58,7 @@
         "iomanip": "cpp",
         "mutex": "cpp",
         "thread": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "ios": "cpp"
     }
 }
